@@ -1,0 +1,11 @@
+{
+  "name": "mxgraph-to-draw2d",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "convert": "node convert.mjs"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.8"
+  }
+}

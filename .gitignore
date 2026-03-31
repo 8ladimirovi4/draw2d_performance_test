@@ -43,3 +43,6 @@ coverage/
 *.local
 
 .cursor
+
+requirements
+test_schemes

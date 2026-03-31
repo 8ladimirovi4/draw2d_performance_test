@@ -122,12 +122,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-0-val",
+    "x": 393,
+    "y": 3463,
+    "text": "0.0100",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-1",
     "x": 33,
     "y": 3495,
     "text": "SIN parameter2",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-1-val",
+    "x": 393,
+    "y": 3495,
+    "text": "1.5727",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -142,12 +162,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-2-val",
+    "x": 393,
+    "y": 3527,
+    "text": "3.1355",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-3",
     "x": 33,
     "y": 3559,
     "text": "SIN parameter4",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-3-val",
+    "x": 393,
+    "y": 3559,
+    "text": "4.6982",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -162,12 +202,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-4-val",
+    "x": 393,
+    "y": 3591,
+    "text": "6.2610",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-5",
     "x": 33,
     "y": 3623,
     "text": "SIN parameter6",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-5-val",
+    "x": 393,
+    "y": 3623,
+    "text": "7.8237",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -182,12 +242,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-6-val",
+    "x": 393,
+    "y": 3655,
+    "text": "9.3865",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-7",
     "x": 33,
     "y": 3687,
     "text": "SIN parameter8",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-7-val",
+    "x": 393,
+    "y": 3687,
+    "text": "10.9492",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -202,12 +282,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-8-val",
+    "x": 393,
+    "y": 3719,
+    "text": "12.5119",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-9",
     "x": 33,
     "y": 3751,
     "text": "SIN parameter10",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-9-val",
+    "x": 393,
+    "y": 3751,
+    "text": "14.0747",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -222,12 +322,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-10-val",
+    "x": 393,
+    "y": 3783,
+    "text": "15.6374",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-11",
     "x": 33,
     "y": 3815,
     "text": "SIN parameter12",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-11-val",
+    "x": 393,
+    "y": 3815,
+    "text": "17.2002",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -242,6 +362,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-12-val",
+    "x": 393,
+    "y": 3847,
+    "text": "18.7629",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-13",
     "x": 33,
     "y": 3879,
@@ -252,12 +382,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-13-val",
+    "x": 393,
+    "y": 3879,
+    "text": "20.3257",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-128-row-14",
     "x": 33,
     "y": 3911,
     "text": "SIN parameter15",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-128-row-14-val",
+    "x": 393,
+    "y": 3911,
+    "text": "21.8884",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -339,12 +489,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-0-val",
+    "x": 1053,
+    "y": 3463,
+    "text": "23.4511",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-1",
     "x": 693,
     "y": 3495,
     "text": "SIN parameter17",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-1-val",
+    "x": 1053,
+    "y": 3495,
+    "text": "25.0139",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -359,12 +529,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-2-val",
+    "x": 1053,
+    "y": 3527,
+    "text": "26.5766",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-3",
     "x": 693,
     "y": 3559,
     "text": "SIN parameter19",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-3-val",
+    "x": 1053,
+    "y": 3559,
+    "text": "28.1394",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -379,12 +569,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-4-val",
+    "x": 1053,
+    "y": 3591,
+    "text": "29.7021",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-5",
     "x": 693,
     "y": 3623,
     "text": "SIN parameter21",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-5-val",
+    "x": 1053,
+    "y": 3623,
+    "text": "31.2649",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -399,12 +609,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-6-val",
+    "x": 1053,
+    "y": 3655,
+    "text": "32.8276",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-7",
     "x": 693,
     "y": 3687,
     "text": "SIN parameter23",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-7-val",
+    "x": 1053,
+    "y": 3687,
+    "text": "34.3903",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -419,12 +649,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-8-val",
+    "x": 1053,
+    "y": 3719,
+    "text": "35.9531",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-9",
     "x": 693,
     "y": 3751,
     "text": "SIN parameter25",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-9-val",
+    "x": 1053,
+    "y": 3751,
+    "text": "37.5158",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -439,12 +689,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-10-val",
+    "x": 1053,
+    "y": 3783,
+    "text": "39.0786",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-11",
     "x": 693,
     "y": 3815,
     "text": "SIN parameter27",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-11-val",
+    "x": 1053,
+    "y": 3815,
+    "text": "40.6413",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -459,6 +729,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-12-val",
+    "x": 1053,
+    "y": 3847,
+    "text": "42.2041",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-13",
     "x": 693,
     "y": 3879,
@@ -469,12 +749,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-13-val",
+    "x": 1053,
+    "y": 3879,
+    "text": "43.7668",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-138-row-14",
     "x": 693,
     "y": 3911,
     "text": "SIN parameter30",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-138-row-14-val",
+    "x": 1053,
+    "y": 3911,
+    "text": "45.3295",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -511,12 +811,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-0-val",
+    "x": 1713,
+    "y": 3463,
+    "text": "46.8923",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-1",
     "x": 1353,
     "y": 3495,
     "text": "SIN parameter32",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-1-val",
+    "x": 1713,
+    "y": 3495,
+    "text": "48.4550",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -531,12 +851,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-2-val",
+    "x": 1713,
+    "y": 3527,
+    "text": "50.0178",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-3",
     "x": 1353,
     "y": 3559,
     "text": "SIN parameter34",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-3-val",
+    "x": 1713,
+    "y": 3559,
+    "text": "51.5805",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -551,12 +891,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-4-val",
+    "x": 1713,
+    "y": 3591,
+    "text": "53.1433",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-5",
     "x": 1353,
     "y": 3623,
     "text": "SIN parameter36",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-5-val",
+    "x": 1713,
+    "y": 3623,
+    "text": "54.7060",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -571,12 +931,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-6-val",
+    "x": 1713,
+    "y": 3655,
+    "text": "56.2687",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-7",
     "x": 1353,
     "y": 3687,
     "text": "SIN parameter38",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-7-val",
+    "x": 1713,
+    "y": 3687,
+    "text": "57.8315",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -591,12 +971,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-8-val",
+    "x": 1713,
+    "y": 3719,
+    "text": "59.3942",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-9",
     "x": 1353,
     "y": 3751,
     "text": "SIN parameter40",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-9-val",
+    "x": 1713,
+    "y": 3751,
+    "text": "60.9570",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -611,12 +1011,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-10-val",
+    "x": 1713,
+    "y": 3783,
+    "text": "62.5197",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-11",
     "x": 1353,
     "y": 3815,
     "text": "SIN parameter42",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-11-val",
+    "x": 1713,
+    "y": 3815,
+    "text": "64.0825",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -631,6 +1051,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-12-val",
+    "x": 1713,
+    "y": 3847,
+    "text": "65.6452",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-13",
     "x": 1353,
     "y": 3879,
@@ -641,12 +1071,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-13-val",
+    "x": 1713,
+    "y": 3879,
+    "text": "67.2080",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-140-row-14",
     "x": 1353,
     "y": 3911,
     "text": "SIN parameter45",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-140-row-14-val",
+    "x": 1713,
+    "y": 3911,
+    "text": "68.7707",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -683,12 +1133,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-0-val",
+    "x": 2373,
+    "y": 3463,
+    "text": "70.3334",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-1",
     "x": 2013,
     "y": 3495,
     "text": "SIN parameter47",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-1-val",
+    "x": 2373,
+    "y": 3495,
+    "text": "71.8962",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -703,12 +1173,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-2-val",
+    "x": 2373,
+    "y": 3527,
+    "text": "73.4589",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-3",
     "x": 2013,
     "y": 3559,
     "text": "SIN parameter49",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-3-val",
+    "x": 2373,
+    "y": 3559,
+    "text": "75.0217",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -723,12 +1213,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-4-val",
+    "x": 2373,
+    "y": 3591,
+    "text": "76.5844",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-5",
     "x": 2013,
     "y": 3623,
     "text": "SIN parameter51",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-5-val",
+    "x": 2373,
+    "y": 3623,
+    "text": "78.1472",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -743,12 +1253,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-6-val",
+    "x": 2373,
+    "y": 3655,
+    "text": "79.7099",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-7",
     "x": 2013,
     "y": 3687,
     "text": "SIN parameter53",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-7-val",
+    "x": 2373,
+    "y": 3687,
+    "text": "81.2726",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -763,12 +1293,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-8-val",
+    "x": 2373,
+    "y": 3719,
+    "text": "82.8354",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-9",
     "x": 2013,
     "y": 3751,
     "text": "SIN parameter55",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-9-val",
+    "x": 2373,
+    "y": 3751,
+    "text": "84.3981",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -783,12 +1333,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-10-val",
+    "x": 2373,
+    "y": 3783,
+    "text": "85.9609",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-11",
     "x": 2013,
     "y": 3815,
     "text": "SIN parameter57",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-11-val",
+    "x": 2373,
+    "y": 3815,
+    "text": "87.5236",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -803,6 +1373,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-12-val",
+    "x": 2373,
+    "y": 3847,
+    "text": "89.0864",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-13",
     "x": 2013,
     "y": 3879,
@@ -813,12 +1393,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-13-val",
+    "x": 2373,
+    "y": 3879,
+    "text": "90.6491",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-142-row-14",
     "x": 2013,
     "y": 3911,
     "text": "SIN parameter60",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-142-row-14-val",
+    "x": 2373,
+    "y": 3911,
+    "text": "92.2118",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -855,12 +1455,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-0-val",
+    "x": 3033,
+    "y": 3463,
+    "text": "93.7746",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-1",
     "x": 2673,
     "y": 3495,
     "text": "SIN parameter62",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-1-val",
+    "x": 3033,
+    "y": 3495,
+    "text": "95.3373",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -875,12 +1495,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-2-val",
+    "x": 3033,
+    "y": 3527,
+    "text": "96.9001",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-3",
     "x": 2673,
     "y": 3559,
     "text": "SIN parameter64",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-3-val",
+    "x": 3033,
+    "y": 3559,
+    "text": "98.4628",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -895,12 +1535,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-4-val",
+    "x": 3033,
+    "y": 3591,
+    "text": "100.0256",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-5",
     "x": 2673,
     "y": 3623,
     "text": "SIN parameter66",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-5-val",
+    "x": 3033,
+    "y": 3623,
+    "text": "101.5883",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -915,12 +1575,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-6-val",
+    "x": 3033,
+    "y": 3655,
+    "text": "103.1510",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-7",
     "x": 2673,
     "y": 3687,
     "text": "SIN parameter68",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-7-val",
+    "x": 3033,
+    "y": 3687,
+    "text": "104.7138",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -935,12 +1615,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-8-val",
+    "x": 3033,
+    "y": 3719,
+    "text": "106.2765",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-9",
     "x": 2673,
     "y": 3751,
     "text": "SIN parameter70",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-9-val",
+    "x": 3033,
+    "y": 3751,
+    "text": "107.8393",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -955,12 +1655,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-10-val",
+    "x": 3033,
+    "y": 3783,
+    "text": "109.4020",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-11",
     "x": 2673,
     "y": 3815,
     "text": "SIN parameter72",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-11-val",
+    "x": 3033,
+    "y": 3815,
+    "text": "110.9648",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -975,6 +1695,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-12-val",
+    "x": 3033,
+    "y": 3847,
+    "text": "112.5275",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-13",
     "x": 2673,
     "y": 3879,
@@ -985,12 +1715,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-13-val",
+    "x": 3033,
+    "y": 3879,
+    "text": "114.0902",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-146-row-14",
     "x": 2673,
     "y": 3911,
     "text": "SIN parameter75",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-146-row-14-val",
+    "x": 3033,
+    "y": 3911,
+    "text": "115.6530",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -1027,12 +1777,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-148-row-0-val",
+    "x": 3693,
+    "y": 3463,
+    "text": "117.2157",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-148-row-1",
     "x": 3333,
     "y": 3495,
     "text": "SIN parameter77",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-148-row-1-val",
+    "x": 3693,
+    "y": 3495,
+    "text": "118.7785",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {
@@ -1047,6 +1817,16 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-148-row-2-val",
+    "x": 3693,
+    "y": 3527,
+    "text": "120.3412",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-148-row-3",
     "x": 3333,
     "y": 3559,
@@ -1057,12 +1837,32 @@
   },
   {
     "type": "draw2d.shape.basic.Label",
+    "id": "fig-148-row-3-val",
+    "x": 3693,
+    "y": 3559,
+    "text": "121.9040",
+    "fontSize": 12,
+    "fontColor": "#006644",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
     "id": "fig-148-row-4",
     "x": 3333,
     "y": 3591,
     "text": "SIN parameter80",
     "fontSize": 12,
     "fontColor": "#222",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "fig-148-row-4-val",
+    "x": 3693,
+    "y": 3591,
+    "text": "123.4667",
+    "fontSize": 12,
+    "fontColor": "#006644",
     "bold": false
   },
   {

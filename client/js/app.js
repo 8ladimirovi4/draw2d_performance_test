@@ -1,6 +1,6 @@
 /**
  * Application entry: fetch fixture over HTTP → JSON.parse → draw2d.io.json.Reader.
- * User Timing marks align with test_plan.md (http_fetch_end, unmarshal_*, schema_visible).
+ * User Timing: http_fetch_end, unmarshal_* (+ measure unmarshal_to_canvas), schema_visible, display_after_http.
  */
 (function () {
   'use strict';
@@ -22,7 +22,11 @@
       var entries = performance.getEntriesByName('display_after_http');
       var m = entries[entries.length - 1];
       if (m) {
-        console.info('[perf] display_after_http:', m.duration.toFixed(2), 'ms');
+        console.info(
+          '[perf] display_after_http:',
+          m.duration.toFixed(2),
+          'ms (HTTP response body received → on-screen schema marker: JSON.parse, unmarshal, canvas/viewport sizing, then 2× requestAnimationFrame before mark)'
+        );
       }
     } catch (e) {
       /* ignore if marks missing */
@@ -35,12 +39,56 @@
     return { w: Math.max(1, w), h: Math.max(1, h) };
   }
 
+  /**
+   * Стандартный draw2d считает координаты через html.offset() и scrollArea.scrollLeft/Top
+   * вместе с clientX/Y — для вложенного overflow (наш #canvas-viewport) это даёт сдвиг hit-test.
+   * Привязка к getBoundingClientRect холста совпадает с видимой областью SVG.
+   */
+  function patchCanvasPointerCoordinates(canvas) {
+    if (!canvas.html || !canvas.html[0] || !canvas.paper || !canvas.paper.canvas) {
+      return;
+    }
+    var surface = canvas.paper.canvas;
+
+    function surfaceRect() {
+      return surface.getBoundingClientRect();
+    }
+
+    canvas.fromDocumentToCanvasCoordinate = function (clientX, clientY) {
+      var r = surfaceRect();
+      return new draw2d.geo.Point(
+        (clientX - r.left) * this.zoomFactor,
+        (clientY - r.top) * this.zoomFactor
+      );
+    };
+    canvas.fromCanvasToDocumentCoordinate = function (x, y) {
+      var r = surfaceRect();
+      return new draw2d.geo.Point(
+        x * (1 / this.zoomFactor) + r.left,
+        y * (1 / this.zoomFactor) + r.top
+      );
+    };
+  }
+
   function fitCanvasToViewportAndContent(canvas, viewportEl) {
     var vp = viewportPixels(viewportEl);
-    canvas.setDimension();
-    var cw = canvas.initialWidth;
-    var ch = canvas.initialHeight;
-    canvas.setDimension(Math.max(cw, vp.w), Math.max(ch, vp.h));
+    var pad = 32;
+    var maxR = 0;
+    var maxB = 0;
+    canvas.getFigures().each(function (i, fig) {
+      var r = fig.getOuterBoundingBox();
+      maxR = Math.max(maxR, r.x + r.w);
+      maxB = Math.max(maxB, r.y + r.h);
+    });
+    if (maxR < 8 || maxB < 8) {
+      canvas.setDimension();
+      maxR = canvas.initialWidth;
+      maxB = canvas.initialHeight;
+    }
+    canvas.setDimension(
+      Math.max(maxR + pad, vp.w),
+      Math.max(maxB + pad, vp.h)
+    );
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -52,6 +100,7 @@
     var vp0 = viewportPixels(viewportEl);
     var canvas = new draw2d.Canvas('gfx_holder', vp0.w, vp0.h);
     canvas.setScrollArea('#canvas-viewport');
+    patchCanvasPointerCoordinates(canvas);
     var loader = new SchemaLoader(canvas);
 
     var url = '/fixtures/' + encodeURIComponent(fixture) + '.json';
@@ -75,6 +124,20 @@
         performance.mark('unmarshal_start');
         loader.unmarshal(data);
         performance.mark('unmarshal_end');
+        try {
+          performance.measure('unmarshal_to_canvas', 'unmarshal_start', 'unmarshal_end');
+          var um = performance.getEntriesByName('unmarshal_to_canvas');
+          var u = um[um.length - 1];
+          if (u) {
+            console.info(
+              '[perf] unmarshal_to_canvas:',
+              u.duration.toFixed(2),
+              'ms (in-memory schema object → canvas figures; JSON.parse not included)'
+            );
+          }
+        } catch (e) {
+          /* ignore if marks missing */
+        }
 
         fitCanvasToViewportAndContent(canvas, viewportEl);
 

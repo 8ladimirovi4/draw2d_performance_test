@@ -28,6 +28,12 @@ body {
   box-shadow: 0 0 0 1px #e0e0e0;
 }
 
+/* Inline SVG по умолчанию даёт смещение по baseline — визуал и clientY расходятся с логикой draw2d */
+#gfx_holder > svg {
+  display: block;
+  vertical-align: top;
+}
+
 .toolbar {
   position: sticky;
   top: 0;

@@ -3,10 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "vendor:jquery": "node ../tools/vendor-jquery.mjs",
-    "vendor:draw2d": "node ../tools/vendor-draw2d.mjs",
-    "vendor:all": "npm run vendor:jquery && npm run vendor:draw2d"
+    "start": "node index.js"
   },
   "dependencies": {
     "@fastify/static": "^8.0.3",

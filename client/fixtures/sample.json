@@ -1,9 +1,9 @@
 [
   {
     "type": "draw2d.shape.basic.Rectangle",
-    "id": "req02-rect-1",
+    "id": "sample-top-rect",
     "x": 16,
-    "y": 24,
+    "y": 150,
     "width": 26,
     "height": 24,
     "radius": 0,
@@ -13,9 +13,9 @@
   },
   {
     "type": "draw2d.shape.basic.Oval",
-    "id": "req02-oval-2",
+    "id": "sample-top-oval",
     "x": 58,
-    "y": 24,
+    "y": 58,
     "width": 24,
     "height": 20,
     "bgColor": "#dde8ff",
@@ -24,9 +24,9 @@
   },
   {
     "type": "draw2d.shape.basic.Circle",
-    "id": "req02-circ-3",
+    "id": "sample-top-circ",
     "x": 98,
-    "y": 24,
+    "y": 58,
     "width": 24,
     "height": 24,
     "bgColor": "#bbdefb",
@@ -35,9 +35,9 @@
   },
   {
     "type": "draw2d.shape.analog.OpAmp",
-    "id": "req02-op-4",
+    "id": "sample-top-opamp",
     "x": 138,
-    "y": 24,
+    "y": 58,
     "width": 26,
     "height": 22,
     "color": "#37474f",
@@ -45,9 +45,9 @@
   },
   {
     "type": "draw2d.shape.basic.Arc",
-    "id": "req02-arc-7",
+    "id": "sample-top-arc",
     "x": 180,
-    "y": 24,
+    "y": 58,
     "width": 28,
     "height": 24,
     "startAngle": 195,
@@ -57,9 +57,9 @@
   },
   {
     "type": "draw2d.shape.flowchart.Document",
-    "id": "req02-doc-43",
+    "id": "sample-top-doc",
     "x": 224,
-    "y": 24,
+    "y": 58,
     "width": 40,
     "height": 28,
     "bgColor": "#b2dfbc",
@@ -68,9 +68,9 @@
   },
   {
     "type": "draw2d.shape.widget.Slider",
-    "id": "req02-sld-44",
+    "id": "sample-top-sld",
     "x": 280,
-    "y": 24,
+    "y": 58,
     "width": 38,
     "height": 14,
     "value": 0,
@@ -81,9 +81,9 @@
   },
   {
     "type": "draw2d.shape.note.PostIt",
-    "id": "req02-post-604",
-    "x": 442,
-    "y": 24,
+    "id": "sample-top-post",
+    "x": 334,
+    "y": 58,
     "height": 50,
     "text": " ",
     "bgColor": "#f8bbd0",
@@ -92,22 +92,23 @@
     "fontSize": 8,
     "stroke": 1,
     "padding": 2,
-    "radius": 3
+    "radius": 3,
+    "width": 50
   },
   {
     "type": "draw2d.shape.basic.Image",
-    "id": "req02-img-673",
-    "x": 496,
-    "y": 24,
+    "id": "sample-top-img",
+    "x": 400,
+    "y": 58,
     "width": 200,
     "height": 200,
     "path": "/fixtures/req02-200x200.jpg"
   },
   {
     "type": "draw2d.shape.diagram.Pie",
-    "id": "req02-pie-118",
-    "x": 712,
-    "y": 24,
+    "id": "sample-top-pie",
+    "x": 616,
+    "y": 58,
     "width": 28,
     "height": 28,
     "diameter": 28,
@@ -122,9 +123,9 @@
   },
   {
     "type": "draw2d.shape.analog.ResistorVertical",
-    "id": "req02-resv-12",
-    "x": 748,
-    "y": 18,
+    "id": "sample-top-resv",
+    "x": 660,
+    "y": 58,
     "width": 26,
     "height": 44,
     "color": "#5d4037",
@@ -132,19 +133,25 @@
   },
   {
     "type": "draw2d.shape.basic.Line",
-    "id": "req02-line-13",
+    "id": "sample-top-line",
     "stroke": 2,
     "color": "#c62828",
     "vertex": [
-      { "x": 786, "y": 26 },
-      { "x": 822, "y": 52 }
+      {
+        "x": 702,
+        "y": 58
+      },
+      {
+        "x": 738,
+        "y": 84
+      }
     ]
   },
   {
     "type": "draw2d.shape.composite.Group",
-    "id": "sample-switch-group",
-    "x": 98,
-    "y": 64,
+    "id": "sample-top-sw-group",
+    "x": 754,
+    "y": 58,
     "width": 1,
     "height": 1,
     "color": "#616161",
@@ -153,49 +160,50 @@
   },
   {
     "type": "draw2d.shape.basic.Rectangle",
-    "id": "sample-switch-track",
-    "x": 98,
-    "y": 64,
+    "id": "sample-top-sw-track",
+    "x": 754,
+    "y": 58,
     "width": 46,
     "height": 22,
     "radius": 11,
     "bgColor": "#bdbdbd",
     "color": "#616161",
     "stroke": 1,
-    "composite": "sample-switch-group"
+    "composite": "sample-top-sw-group"
   },
   {
     "type": "draw2d.shape.basic.Rectangle",
-    "id": "sample-switch-knob",
-    "x": 101,
-    "y": 67,
+    "id": "sample-top-sw-knob",
+    "x": 757,
+    "y": 61,
     "width": 18,
     "height": 18,
     "radius": 9,
     "bgColor": "#fafafa",
     "color": "#757575",
     "stroke": 1,
-    "composite": "sample-switch-group"
+    "composite": "sample-top-sw-group"
   },
   {
     "type": "draw2d.shape.basic.Label",
-    "id": "sample-switch-state",
-    "x": 152,
-    "y": 66,
+    "id": "sample-top-sw-state",
+    "x": 808,
+    "y": 60,
     "text": "Выкл",
     "fontSize": 11,
     "fontColor": "#616161",
     "bold": true,
-    "composite": "sample-switch-group"
+    "composite": "sample-top-sw-group"
   },
   {
     "type": "draw2d.shape.basic.Label",
-    "id": "lable-5-symbols",
-    "x": 152,
-    "y": 100,
+    "id": "sample-top-lbl5",
+    "x": 856,
+    "y": 58,
     "text": "12345",
     "fontSize": 11,
     "fontColor": "#616161",
     "bold": true
   }
+  
 ]

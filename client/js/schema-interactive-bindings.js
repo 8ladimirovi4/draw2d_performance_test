@@ -90,6 +90,16 @@
         labelId: 'sample-switch-' + n + '-state',
       });
     }
+    installToggleSwitch(canvas, {
+      trackId: 'poc1-smp-sw-13-track',
+      knobId: 'poc1-smp-sw-13-knob',
+      labelId: 'poc1-smp-sw-13-state',
+    });
+    installToggleSwitch(canvas, {
+      trackId: 'sample-top-sw-track',
+      knobId: 'sample-top-sw-knob',
+      labelId: 'sample-top-sw-state',
+    });
   }
 
   global.installSchemaInteractiveBindings = installSchemaInteractiveBindings;

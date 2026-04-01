@@ -28,10 +28,10 @@ Test harness for measuring diagram rendering in the browser with the [draw2d](ht
 ## Environment variables
 
 
-| Variable | Purpose        | Default |
-| ---------------------- | ----------------------------- | ------------------------- |
-| `PORT`               | Server port     | `3000`                  |
-| `HOST`               | Bind address | `0.0.0.0`               |
+| Variable | Purpose      | Default   |
+| ---------- | -------------- | ----------- |
+| `PORT`   | Server port  | `3000`    |
+| `HOST`   | Bind address | `0.0.0.0` |
 
 PowerShell example:
 
@@ -65,3 +65,36 @@ node convert.mjs path/to/schema.xml path/to/output_dir
 The second argument may be a **directory** (existing or new, without a `.json` suffix): the result is written to `<directory>/<input_xml_basename>.json`, and parent folders are created automatically.
 
 With no arguments, the script reads `../../test_schemes/mxGraph(xml)/buttons.xml` and writes `../../client/fixtures/buttons.json`.
+
+---
+
+## Official draw2d repository
+
+Source code and releases: **[freegroup/draw2d](https://github.com/freegroup/draw2d)** · clone: `git clone https://github.com/freegroup/draw2d.git`
+
+## Running from the repository root (Python)
+
+1. Install Node dependencies for the Fastify server (there is no `package.json` in the repo root, so from the root use):
+
+   ```bash
+   npm install --prefix server
+   ```
+
+   Or `cd server` and run `npm install` there.
+
+2. From the **repository root**, start a static HTTP server:
+
+   ```bash
+   python -m http.server 8080
+   ```
+
+3. Open the app in the browser (static assets live under `client/`):
+
+   - **http://localhost:8080/client/**
+
+   If you start the server **from the `client` directory**, open **http://localhost:8080/** instead:
+
+   ```bash
+   cd client
+   python -m http.server 8080
+   ```

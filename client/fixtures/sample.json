@@ -80,16 +80,6 @@
     "radius": 3
   },
   {
-    "type": "draw2d.shape.basic.Label",
-    "id": "req02-lbl-353",
-    "x": 378,
-    "y": 24,
-    "text": "N0000",
-    "fontSize": 11,
-    "fontColor": "#111111",
-    "bold": false
-  },
-  {
     "type": "draw2d.shape.note.PostIt",
     "id": "req02-post-604",
     "x": 442,
@@ -149,5 +139,39 @@
       { "x": 786, "y": 26 },
       { "x": 822, "y": 52 }
     ]
+  },
+  {
+    "type": "draw2d.shape.basic.Rectangle",
+    "id": "sample-switch-track",
+    "x": 98,
+    "y": 64,
+    "width": 46,
+    "height": 22,
+    "radius": 11,
+    "bgColor": "#bdbdbd",
+    "color": "#616161",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.basic.Rectangle",
+    "id": "sample-switch-knob",
+    "x": 101,
+    "y": 67,
+    "width": 18,
+    "height": 18,
+    "radius": 9,
+    "bgColor": "#fafafa",
+    "color": "#757575",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "sample-switch-state",
+    "x":152,
+    "y": 66,
+    "text": "Выкл",
+    "fontSize": 11,
+    "fontColor": "#616161",
+    "bold": true
   }
 ]

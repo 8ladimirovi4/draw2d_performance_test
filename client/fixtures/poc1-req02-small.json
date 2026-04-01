@@ -97,6 +97,9 @@
     "radius": 3,
     "composite": "poc1-req02-group"
   },
+
+
+
   {
     "type": "draw2d.shape.composite.Group",
     "id": "sample-switch-group",
@@ -145,13 +148,17 @@
     "bold": true,
     "composite": "sample-switch-group"
   },
+
+
+
+
   {
     "type": "draw2d.shape.composite.Group",
     "id": "poc1-req02-extended-group",
     "x": 16,
-    "y": 114,
-    "width": 1,
-    "height": 1,
+    "y": 112,
+    "width": 284,
+    "height": 66,
     "color": "#4169e1",
     "stroke": 1,
     "resizeable": false
@@ -159,7 +166,7 @@
   {
     "type": "draw2d.shape.widget.Slider",
     "id": "req02-sld-44",
-    "x": 16,
+    "x": 24,
     "y": 120,
     "width": 38,
     "height": 14,
@@ -173,8 +180,9 @@
   {
     "type": "draw2d.shape.note.PostIt",
     "id": "req02-post-604",
-    "x": 178,
+    "x": 70,
     "y": 120,
+    "width": 50,
     "height": 50,
     "text": " ",
     "bgColor": "#f8bbd0",
@@ -187,19 +195,21 @@
     "composite": "poc1-req02-extended-group"
   },
   {
-    "type": "draw2d.shape.basic.Image",
-    "id": "req02-img-673",
-    "x": 232,
+    "type": "draw2d.shape.flowchart.Document",
+    "id": "req02-doc-43",
+    "x": 128,
     "y": 120,
-    "width": 200,
-    "height": 200,
-    "path": "/fixtures/req02-200x200.jpg",
+    "width": 40,
+    "height": 28,
+    "bgColor": "#b2dfbc",
+    "color": "#2e7d32",
+    "stroke": 1,
     "composite": "poc1-req02-extended-group"
   },
   {
     "type": "draw2d.shape.diagram.Pie",
     "id": "req02-pie-118",
-    "x": 448,
+    "x": 176,
     "y": 120,
     "width": 28,
     "height": 28,
@@ -217,8 +227,8 @@
   {
     "type": "draw2d.shape.analog.ResistorVertical",
     "id": "req02-resv-12",
-    "x": 484,
-    "y": 114,
+    "x": 212,
+    "y": 120,
     "width": 26,
     "height": 44,
     "color": "#5d4037",
@@ -231,9 +241,20 @@
     "stroke": 2,
     "color": "#c62828",
     "vertex": [
-      { "x": 522, "y": 122 },
-      { "x": 568, "y": 148 }
+      { "x": 246, "y": 132 },
+      { "x": 292, "y": 132 }
     ],
     "composite": "poc1-req02-extended-group"
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "lable-5-symbols",
+    "x": 16,
+    "y": 200,
+    "text": "12345",
+    "fontSize": 11,
+    "fontColor": "#616161",
+    "bold": true
   }
+
 ]

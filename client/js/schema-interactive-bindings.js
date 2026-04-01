@@ -24,12 +24,16 @@
     }
 
     var on = false;
-    var knobXOff = knob.getX();
-    var knobY = knob.getY();
-    var knobXOn = track.getX() + track.getWidth() - knob.getWidth() - 3;
+    var knobRelXOff = knob.getX() - track.getX();
+    var knobRelY = knob.getY() - track.getY();
+    var knobPadX = 3;
 
     function syncView() {
-      knob.setPosition(on ? knobXOn : knobXOff, knobY);
+      var tx = track.getX();
+      var ty = track.getY();
+      var knobXOn = tx + track.getWidth() - knob.getWidth() - knobPadX;
+      var knobXOff = tx + knobRelXOff;
+      knob.setPosition(on ? knobXOn : knobXOff, ty + knobRelY);
       track.attr({
         bgColor: on ? '#66bb6a' : '#bdbdbd',
         color: on ? '#2e7d32' : '#616161'
@@ -72,6 +76,7 @@
 
     track.on('click', onToggleClick);
     knob.on('click', onToggleClick);
+    label.on('click', onToggleClick);
   }
 
   function installSchemaInteractiveBindings(canvas) {

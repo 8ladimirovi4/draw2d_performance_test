@@ -1,59 +1,59 @@
 # draw2d_performance_test
 
-Тестовый стенд для замеров отрисовки схем в браузере с библиотекой [draw2d](https://github.com/freegroup/draw2d) (см. `test_plan.md`).
+Test harness for measuring diagram rendering in the browser with the [draw2d](https://github.com/freegroup/draw2d) library (see `test_plan.md`).
 
-## Требования
+## Requirements
 
-- [Node.js](https://nodejs.org/) 18+ (с поддержкой ES modules)
+- [Node.js](https://nodejs.org/) 18+ (with ES module support)
 
-## Запуск
+## Running
 
-1. Установите зависимости сервера:
+1. Install server dependencies:
 
    ```bash
    cd server
    npm install
    ```
-2. Запустите HTTP-сервер (Fastify раздаёт статику из каталога `client/`):
+2. Start the HTTP server (Fastify serves static files from the `client/` directory):
 
    ```bash
    npm start
    ```
 
-   По умолчанию сервер слушает **http://127.0.0.1:3000** .
-3. Откройте в браузере корень приложения, например:
+   By default the server listens on **http://127.0.0.1:3000** .
+3. Open the app root in your browser, for example:
 
    - http://127.0.0.1:3000/
 
-## Параметры окружения
+## Environment variables
 
 
-| Переменная | Назначение        | По умолчанию |
+| Variable | Purpose        | Default |
 | ---------------------- | ----------------------------- | ------------------------- |
-| `PORT`               | Порт сервера     | `3000`                  |
-| `HOST`               | Адрес привязки | `0.0.0.0`               |
+| `PORT`               | Server port     | `3000`                  |
+| `HOST`               | Bind address | `0.0.0.0`               |
 
-Пример для PowerShell:
+PowerShell example:
 
 ```powershell
 $env:PORT=8080; npm start
 ```
 
-## Выбор фикстуры схемы
+## Choosing a diagram fixture
 
-JSON-файлы лежат в `client/fixtures/`. Имя файла (без `.json`) задаётся query-параметром:
+JSON files live in `client/fixtures/`. The file name (without `.json`) is set via a query parameter:
 
 - http://127.0.0.1:3000/?fixture=sample
 
-Если параметр не указан, подгружается `sample`.
+If the parameter is omitted, `sample` is loaded.
 
-Фикстура **`buttons`** (`client/fixtures/buttons.json`) получена из mxGraph-XML `test_schemes/mxGraph(xml)/buttons.xml` конвертером в `tools/mxgraph-to-draw2d/` (геометрия в абсолютных координатах, цвета из `style` / `mxBindings`, подписи для swimlane, кнопок и строк таблицы). Пиксель-в-пиксель как в mxGraph (HTML-разметка таблиц, градиенты и т.п.) не повторяется — используются стандартные фигуры draw2d.
+The **`buttons`** fixture (`client/fixtures/buttons.json`) was produced from mxGraph XML `test_schemes/mxGraph(xml)/buttons.xml` using the converter in `tools/mxgraph-to-draw2d/` (geometry in absolute coordinates, colors from `style` / `mxBindings`, labels for swimlanes, buttons, and table rows). Pixel-perfect parity with mxGraph (HTML table markup, gradients, etc.) is not attempted — standard draw2d shapes are used.
 
-Пример:
+Example:
 
 - http://127.0.0.1:3000/?fixture=buttons
 
-### Конвертация mxGraph → draw2d JSON
+### Converting mxGraph → draw2d JSON
 
 ```bash
 cd tools/mxgraph-to-draw2d
@@ -62,6 +62,6 @@ node convert.mjs path/to/schema.xml path/to/output.json
 node convert.mjs path/to/schema.xml path/to/output_dir
 ```
 
-Второй аргумент может быть **каталогом** (уже существующим или новым без суффикса `.json`): тогда результат пишется в `<каталог>/<имя_входного_xml>.json`, родительские папки создаются автоматически.
+The second argument may be a **directory** (existing or new, without a `.json` suffix): the result is written to `<directory>/<input_xml_basename>.json`, and parent folders are created automatically.
 
-Без аргументов скрипт читает `../../test_schemes/mxGraph(xml)/buttons.xml` и пишет `../../client/fixtures/buttons.json`.
+With no arguments, the script reads `../../test_schemes/mxGraph(xml)/buttons.xml` and writes `../../client/fixtures/buttons.json`.

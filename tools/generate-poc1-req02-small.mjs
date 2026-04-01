@@ -1,14 +1,3 @@
-/**
- * client/fixtures/poc1-req02-small.json — POC_1.REQ_02 + JPG 200×200 внизу.
- *
- *   6×7, 35×2 динамика, 40×6, 250 надписей 5 симв., 35×2, изображение JPG.
- *   Фигур: 672 + 1 (Image) = 673
- *
- * Координаты: один вертикальный коридор yCursor, ширина контента ≤ ~860px.
- *
- * Запуск: node tools/generate-poc1-req02-small.mjs
- */
-
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -145,7 +134,7 @@ function pushPie(x, y, diameter, data) {
     height: diameter,
     diameter,
     data,
-    stroke: 1,
+    stroke: 0,
     color: '#37474f'
   });
 }
@@ -191,6 +180,32 @@ function pushImage(x, y, w, h, path) {
     width: w,
     height: h,
     path: path
+  });
+}
+
+function pushResistorVertical(x, y, w, h) {
+  figures.push({
+    type: 'draw2d.shape.analog.ResistorVertical',
+    id: uid('resv'),
+    x,
+    y,
+    width: w,
+    height: h,
+    color: '#5d4037',
+    stroke: 1
+  });
+}
+
+function pushLine(x1, y1, x2, y2) {
+  figures.push({
+    type: 'draw2d.shape.basic.Line',
+    id: uid('line'),
+    stroke: 2,
+    color: '#c62828',
+    vertex: [
+      { x: x1, y: y1 },
+      { x: x2, y: y2 }
+    ]
   });
 }
 
@@ -275,9 +290,11 @@ for (let i = 0; i < 35; i++) {
 y += Math.ceil(35 / 7) * 38 + GAP;
 
 pushImage(LX, y, 200, 200, '/fixtures/req02-200x200.jpg');
+pushResistorVertical(LX + 220, y + 78, 26, 44);
+pushLine(LX + 258, y + 86, LX + 298, y + 118);
 
 fs.writeFileSync(outJson, JSON.stringify(figures, null, 2) + '\n');
 
 const types = new Set(figures.map((f) => f.type));
-console.log('OK', outJson, 'figures:', figures.length, '(672 контента + JPG)');
+console.log('OK', outJson, 'figures:', figures.length, '(672 контента + JPG + 2 типа образца)');
 console.log('unique type:', types.size);

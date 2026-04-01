@@ -39,11 +39,6 @@
     return { w: Math.max(1, w), h: Math.max(1, h) };
   }
 
-  /**
-   * Стандартный draw2d считает координаты через html.offset() и scrollArea.scrollLeft/Top
-   * вместе с clientX/Y — для вложенного overflow (наш #canvas-viewport) это даёт сдвиг hit-test.
-   * Привязка к getBoundingClientRect холста совпадает с видимой областью SVG.
-   */
   function patchCanvasPointerCoordinates(canvas) {
     if (!canvas.html || !canvas.html[0] || !canvas.paper || !canvas.paper.canvas) {
       return;

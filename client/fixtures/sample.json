@@ -1,45 +1,153 @@
 [
   {
+    "type": "draw2d.shape.basic.Rectangle",
+    "id": "req02-rect-1",
+    "x": 16,
+    "y": 24,
+    "width": 26,
+    "height": 24,
+    "radius": 0,
+    "bgColor": "#d4d4ee",
+    "color": "#333333",
+    "stroke": 1
+  },
+  {
     "type": "draw2d.shape.basic.Oval",
-    "id": "5b4c74b0-96d1-1aa3-7eca-bbeaed5fffd7",
-    "x": 237,
-    "y": 236,
-    "width": 93,
-    "height": 38,
-    "bgColor": [255, 255, 0]
+    "id": "req02-oval-2",
+    "x": 58,
+    "y": 24,
+    "width": 24,
+    "height": 20,
+    "bgColor": "#dde8ff",
+    "color": "#333333",
+    "stroke": 1
   },
   {
-    "type": "draw2d.shape.basic.Rectangle",
-    "id": "354fa3b9-a834-0221-2009-abc2d6bd852a",
-    "x": 225,
-    "y": 97,
-    "width": 201,
-    "height": 82,
-    "radius": 2,
-    "bgColor": { "red": 0, "green": 255, "blue": 0 }
+    "type": "draw2d.shape.basic.Circle",
+    "id": "req02-circ-3",
+    "x": 98,
+    "y": 24,
+    "width": 24,
+    "height": 24,
+    "bgColor": "#bbdefb",
+    "color": "#333333",
+    "stroke": 1
   },
   {
-    "type": "draw2d.shape.basic.Rectangle",
-    "id": "ebfb35bb-5767-8155-c804-14bda7759dc2",
-    "x": 72,
-    "y": 45,
-    "width": 50,
+    "type": "draw2d.shape.analog.OpAmp",
+    "id": "req02-op-4",
+    "x": 138,
+    "y": 24,
+    "width": 26,
+    "height": 22,
+    "color": "#37474f",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.basic.Arc",
+    "id": "req02-arc-7",
+    "x": 180,
+    "y": 24,
+    "width": 28,
+    "height": 24,
+    "startAngle": 195,
+    "endAngle": 345,
+    "color": "#424242",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.flowchart.Document",
+    "id": "req02-doc-43",
+    "x": 224,
+    "y": 24,
+    "width": 40,
+    "height": 28,
+    "bgColor": "#b2dfbc",
+    "color": "#2e7d32",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.widget.Slider",
+    "id": "req02-sld-44",
+    "x": 280,
+    "y": 24,
+    "width": 38,
+    "height": 14,
+    "value": 0,
+    "bgColor": "#cfd8dc",
+    "color": "#7cb342",
+    "stroke": 1,
+    "radius": 3
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "req02-lbl-353",
+    "x": 378,
+    "y": 24,
+    "text": "N0000",
+    "fontSize": 11,
+    "fontColor": "#111111",
+    "bold": false
+  },
+  {
+    "type": "draw2d.shape.note.PostIt",
+    "id": "req02-post-604",
+    "x": 442,
+    "y": 24,
     "height": 50,
-    "radius": 2,
-    "bgColor": "#ff0000"
+    "text": " ",
+    "bgColor": "#f8bbd0",
+    "color": "#880e4f",
+    "fontColor": "#4a148c",
+    "fontSize": 8,
+    "stroke": 1,
+    "padding": 2,
+    "radius": 3
   },
   {
-    "type": "draw2d.shape.analog.OpAmp",
-    "id": "ebfb35bb-5767-8155-c804-14bd48789dc21",
-    "x": 400,
-    "y": 80,
-    "width": 100,
-    "height": 100
+    "type": "draw2d.shape.basic.Image",
+    "id": "req02-img-673",
+    "x": 496,
+    "y": 24,
+    "width": 200,
+    "height": 200,
+    "path": "/fixtures/req02-200x200.jpg"
   },
   {
-    "type": "draw2d.shape.analog.OpAmp",
-    "id": "ebfb35bb-5767-8155-c804-14bd48789dc22",
-    "x": 400,
-    "y": 220
+    "type": "draw2d.shape.diagram.Pie",
+    "id": "req02-pie-118",
+    "x": 712,
+    "y": 24,
+    "width": 28,
+    "height": 28,
+    "diameter": 28,
+    "data": [
+      20,
+      26.666666666666668,
+      26.666666666666668,
+      26.666666666666668
+    ],
+    "stroke": 0,
+    "color": "#37474f"
+  },
+  {
+    "type": "draw2d.shape.analog.ResistorVertical",
+    "id": "req02-resv-12",
+    "x": 748,
+    "y": 18,
+    "width": 26,
+    "height": 44,
+    "color": "#5d4037",
+    "stroke": 1
+  },
+  {
+    "type": "draw2d.shape.basic.Line",
+    "id": "req02-line-13",
+    "stroke": 2,
+    "color": "#c62828",
+    "vertex": [
+      { "x": 786, "y": 26 },
+      { "x": 822, "y": 52 }
+    ]
   }
 ]

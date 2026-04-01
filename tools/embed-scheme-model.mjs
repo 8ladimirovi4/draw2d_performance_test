@@ -1,16 +1,3 @@
-/**
- * Вставляет или заменяет содержимое mxGraph XML в элементе <Model> внутри <Scheme> файла .mtp.
- *
- * Режим замены (по умолчанию): ищется <Scheme> с заданными ID / Version / Name>, подменяется <Model>.
- *
- * Режим добавления: node tools/embed-scheme-model.mjs --add ...
- *   Новый блок <Scheme> вставляется перед </SchemeSet> (после существующих схем).
- *
- * Использование:
- *   node tools/embed-scheme-model.mjs [--add] <mtp> [xml] [Scheme-ID] [Name] [Version]
- *
- * Без аргументов (не --add): mtp и xml по умолчанию для схемы buttons (замена).
- */
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join, resolve } from 'node:path';
@@ -34,7 +21,6 @@ const schemeName =
   (addMode ? basename(xmlPath, extname(xmlPath)) : 'buttons');
 const schemeVersion = argv[4] || '3.0';
 
-/** Убирает UTF-8 BOM — иначе некоторые загрузчики .mtp дают «лишние данные до корня» / ошибка XML. */
 function stripBom(s) {
   if (!s || s.charCodeAt(0) !== 0xfeff) return s;
   return s.slice(1);

@@ -7,8 +7,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
+
   background: #f4f4f5;
   font-family: system-ui, sans-serif;
 }
@@ -28,16 +27,12 @@ body {
   box-shadow: 0 0 0 1px #e0e0e0;
 }
 
-/* Inline SVG по умолчанию даёт смещение по baseline — визуал и clientY расходятся с логикой draw2d */
 #gfx_holder > svg {
   display: block;
   vertical-align: top;
 }
 
 .toolbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   display: flex;
   align-items: center;
   gap: 12px;

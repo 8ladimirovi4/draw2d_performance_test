@@ -81,6 +81,15 @@
 
   function installSchemaInteractiveBindings(canvas) {
     installToggleSwitch(canvas);
+    var i;
+    for (i = 1; i <= 35; i++) {
+      var n = i < 10 ? '0' + i : String(i);
+      installToggleSwitch(canvas, {
+        trackId: 'sample-switch-' + n + '-track',
+        knobId: 'sample-switch-' + n + '-knob',
+        labelId: 'sample-switch-' + n + '-state',
+      });
+    }
   }
 
   global.installSchemaInteractiveBindings = installSchemaInteractiveBindings;

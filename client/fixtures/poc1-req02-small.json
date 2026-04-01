@@ -246,15 +246,68 @@
     ],
     "composite": "poc1-req02-extended-group"
   },
+
+
+  {
+    "type": "draw2d.shape.composite.Group",
+    "id": "poc1-req02-extended2-group",
+    "x": 16,
+    "y": 186,
+    "width": 112,
+    "height": 66,
+    "color": "#4169e1",
+    "stroke": 1,
+    "resizeable": false
+  },
+  {
+    "type": "draw2d.shape.widget.Slider",
+    "id": "req02-sld-ext2",
+    "x": 24,
+    "y": 194,
+    "width": 38,
+    "height": 14,
+    "value": 0,
+    "bgColor": "#cfd8dc",
+    "color": "#7cb342",
+    "stroke": 1,
+    "radius": 3,
+    "composite": "poc1-req02-extended2-group"
+  },
+  {
+    "type": "draw2d.shape.note.PostIt",
+    "id": "req02-post-ext2",
+    "x": 70,
+    "y": 194,
+    "width": 50,
+    "height": 50,
+    "text": " ",
+    "bgColor": "#f8bbd0",
+    "color": "#880e4f",
+    "fontColor": "#4a148c",
+    "fontSize": 8,
+    "stroke": 1,
+    "padding": 2,
+    "radius": 3,
+    "composite": "poc1-req02-extended2-group"
+  },
   {
     "type": "draw2d.shape.basic.Label",
     "id": "lable-5-symbols",
     "x": 16,
-    "y": 200,
+    "y": 268,
     "text": "12345",
     "fontSize": 11,
     "fontColor": "#616161",
     "bold": true
+  },
+  {
+    "type": "draw2d.shape.basic.Image",
+    "id": "req02-img-673",
+    "x": 16,
+    "y": 300,
+    "width": 200,
+    "height": 200,
+    "path": "/fixtures/req02-200x200.jpg"
   }
 
 ]

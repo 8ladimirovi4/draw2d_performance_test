@@ -141,6 +141,17 @@
     ]
   },
   {
+    "type": "draw2d.shape.composite.Group",
+    "id": "sample-switch-group",
+    "x": 98,
+    "y": 64,
+    "width": 1,
+    "height": 1,
+    "color": "#616161",
+    "stroke": 1,
+    "resizeable": false
+  },
+  {
     "type": "draw2d.shape.basic.Rectangle",
     "id": "sample-switch-track",
     "x": 98,
@@ -150,7 +161,8 @@
     "radius": 11,
     "bgColor": "#bdbdbd",
     "color": "#616161",
-    "stroke": 1
+    "stroke": 1,
+    "composite": "sample-switch-group"
   },
   {
     "type": "draw2d.shape.basic.Rectangle",
@@ -162,14 +174,26 @@
     "radius": 9,
     "bgColor": "#fafafa",
     "color": "#757575",
-    "stroke": 1
+    "stroke": 1,
+    "composite": "sample-switch-group"
   },
   {
     "type": "draw2d.shape.basic.Label",
     "id": "sample-switch-state",
-    "x":152,
+    "x": 152,
     "y": 66,
     "text": "Выкл",
+    "fontSize": 11,
+    "fontColor": "#616161",
+    "bold": true,
+    "composite": "sample-switch-group"
+  },
+  {
+    "type": "draw2d.shape.basic.Label",
+    "id": "lable-5-symbols",
+    "x": 152,
+    "y": 100,
+    "text": "12345",
     "fontSize": 11,
     "fontColor": "#616161",
     "bold": true

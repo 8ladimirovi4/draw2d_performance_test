@@ -1,9 +1,18 @@
 /**
  * Application entry: fetch fixture over HTTP → JSON.parse → draw2d.io.json.Reader.
- * User Timing: http_fetch_end, unmarshal_* (+ measure unmarshal_to_canvas), schema_visible, display_after_http.
+ * User Timing: см. константы MARK_* / MEASURE_* ниже (выключатель — в schema-interactive-bindings.js).
  */
 (function () {
   'use strict';
+
+  /** User Timing: ответ тела HTTP → первый кадр после отрисовки схемы */
+  var MARK_HTTP_FETCH_END = 'http_fetch_end';
+  var MARK_UNMARSHAL_START = 'unmarshal_start';
+  var MARK_UNMARSHAL_END = 'unmarshal_end';
+  var MEASURE_UNMARSHAL_TO_CANVAS = 'unmarshal_to_canvas';
+
+  var MARK_SCHEMA_VISIBLE = 'schema_visible';
+  var MEASURE_DISPLAY_AFTER_HTTP = 'display_after_http';
 
   function getFixtureName() {
     var params = new URLSearchParams(window.location.search);
@@ -16,14 +25,14 @@
   }
 
   function markSchemaVisible() {
-    performance.mark('schema_visible');
+    performance.mark(MARK_SCHEMA_VISIBLE);
     try {
-      performance.measure('display_after_http', 'http_fetch_end', 'schema_visible');
-      var entries = performance.getEntriesByName('display_after_http');
+      performance.measure(MEASURE_DISPLAY_AFTER_HTTP, MARK_HTTP_FETCH_END, MARK_SCHEMA_VISIBLE);
+      var entries = performance.getEntriesByName(MEASURE_DISPLAY_AFTER_HTTP);
       var m = entries[entries.length - 1];
       if (m) {
         console.info(
-          '[perf] display_after_http:',
+          '[perf] ' + MEASURE_DISPLAY_AFTER_HTTP + ':',
           m.duration.toFixed(2),
           'ms (HTTP response body received → on-screen schema marker: JSON.parse, unmarshal, canvas/viewport sizing, then 2× requestAnimationFrame before mark)'
         );
@@ -112,20 +121,25 @@
         return res.text();
       })
       .then(function (text) {
-        performance.mark('http_fetch_end');
+        performance.mark(MARK_HTTP_FETCH_END);
         var data = JSON.parse(text);
 
         canvas.clear();
-        performance.mark('unmarshal_start');
+
+        performance.mark(MARK_UNMARSHAL_START);
         loader.unmarshal(data);
-        performance.mark('unmarshal_end');
+        if (typeof installSchemaInteractiveBindings === 'function') {
+          installSchemaInteractiveBindings(canvas);
+        }
+        performance.mark(MARK_UNMARSHAL_END);
+        
         try {
-          performance.measure('unmarshal_to_canvas', 'unmarshal_start', 'unmarshal_end');
-          var um = performance.getEntriesByName('unmarshal_to_canvas');
+          performance.measure(MEASURE_UNMARSHAL_TO_CANVAS, MARK_UNMARSHAL_START, MARK_UNMARSHAL_END);
+          var um = performance.getEntriesByName(MEASURE_UNMARSHAL_TO_CANVAS);
           var u = um[um.length - 1];
           if (u) {
             console.info(
-              '[perf] unmarshal_to_canvas:',
+              '[perf] ' + MEASURE_UNMARSHAL_TO_CANVAS + ':',
               u.duration.toFixed(2),
               'ms (in-memory schema object → canvas figures; JSON.parse not included)'
             );

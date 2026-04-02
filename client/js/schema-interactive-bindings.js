@@ -96,6 +96,11 @@
       labelId: 'poc1-smp-sw-13-state',
     });
     installToggleSwitch(canvas, {
+      trackId: 'poc1-req01-pre-sw-track',
+      knobId: 'poc1-req01-pre-sw-knob',
+      labelId: 'poc1-req01-pre-sw-state',
+    });
+    installToggleSwitch(canvas, {
       trackId: 'sample-top-sw-track',
       knobId: 'sample-top-sw-knob',
       labelId: 'sample-top-sw-state',

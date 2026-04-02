@@ -122,6 +122,7 @@
       })
       .then(function (text) {
         performance.mark(MARK_HTTP_FETCH_END);
+        //parsing text -> object not included to render metric
         var data = JSON.parse(text);
 
         canvas.clear();

@@ -95,11 +95,14 @@
       knobId: 'poc1-smp-sw-13-knob',
       labelId: 'poc1-smp-sw-13-state',
     });
-    installToggleSwitch(canvas, {
-      trackId: 'poc1-req01-pre-sw-track',
-      knobId: 'poc1-req01-pre-sw-knob',
-      labelId: 'poc1-req01-pre-sw-state',
-    });
+    for (i = 1; i <= 310; i++) {
+      var preN = i === 1 ? '' : '-' + (i < 10 ? '00' + i : i < 100 ? '0' + i : String(i));
+      installToggleSwitch(canvas, {
+        trackId: 'poc1-req01-pre-sw-track' + preN,
+        knobId: 'poc1-req01-pre-sw-knob' + preN,
+        labelId: 'poc1-req01-pre-sw-state' + preN,
+      });
+    }
     installToggleSwitch(canvas, {
       trackId: 'sample-top-sw-track',
       knobId: 'sample-top-sw-knob',

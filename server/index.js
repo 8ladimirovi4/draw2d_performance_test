@@ -1,9 +1,12 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import dotenv from 'dotenv';
 import fastify from 'fastify';
 import fastifyStatic from '@fastify/static';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 const clientRoot = path.join(__dirname, '..', 'client');
 
 async function buildServer() {

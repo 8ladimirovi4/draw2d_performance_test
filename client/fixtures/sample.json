@@ -204,6 +204,30 @@
     "fontSize": 11,
     "fontColor": "#616161",
     "bold": true
+  },
+  {
+    "type": "draw2d.shape.custom.SvgTableFigure",
+    "id": "sample-svg-table",
+    "x": 920,
+    "y": 32,
+    "stroke": 1,
+    "radius": 4,
+    "bgColor": "#f8fafc",
+    "color": "#64748b",
+    "cellPadding": {
+      "top": 6,
+      "right": 10,
+      "bottom": 6,
+      "left": 10
+    },
+    "fontSize": 11,
+    "fontFamily": "sans-serif",
+    "headerTextColor": "#0f172a",
+    "textColor": "#334155",
+    "rows": [
+      ["Параметр", "Значение"],
+      ["A", "12.3"],
+      ["B", "45.6"]
+    ]
   }
-  
 ]

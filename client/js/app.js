@@ -149,6 +149,10 @@
           /* ignore if marks missing */
         }
 
+        if (typeof installPerfDragDistanceGuide === 'function') {
+          installPerfDragDistanceGuide(canvas, fixture);
+        }
+
         fitCanvasToViewportAndContent(canvas, viewportEl);
 
         requestAnimationFrame(function () {

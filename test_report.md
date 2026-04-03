@@ -141,9 +141,9 @@
 
 | № | Скриншот small                                                 | Скриншот big                                               |
 | :--: | ------------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| 1 | [poc1-req02-small_render.png](images/AC_2/poc1-req02-small_render.png) | [poc1-req01-big_render.png](images/AC_2/poc1-req01-big_render.png) |
-| 2 | [poc1-req02-small_render.png](images/AC_2/poc1-req02-small_render.png) | [poc1-req01-big_render.png](images/AC_2/poc1-req01-big_render.png) |
-| 3 | [poc1-req02-small_render.png](images/AC_2/poc1-req02-small_render.png) | [poc1-req01-big_render.png](images/AC_2/poc1-req01-big_render.png) |
+| 1 | [poc1-req02-small_cklick.png](images/AC_2/poc1-req02-small_cklick.png) | [poc1-req01-big_cklick.png](images/AC_2/poc1-req01-big_cklick.png) |
+| 2 | [poc1-req02-small_cklick.png](images/AC_2/poc1-req02-small_cklick.png) | [poc1-req01-big_cklick.png](images/AC_2/poc1-req01-big_cklick.png) |
+| 3 | [poc1-req02-small_cklick.png](images/AC_2/poc1-req02-small_cklick.png) | [poc1-req01-big_cklick.png](images/AC_2/poc1-req01-big_cklick.png) |
 
 *По одному консольному PNG на фикстуру; строки 1–3 повторяют ссылку (как в **§3.4**).*
 
@@ -162,12 +162,12 @@
 
 ### 6.1. `poc1-req02-small` — консоль
 
-![AC_02 — консоль, три замера (poc1-req02-small)](images/AC_2/poc1-req02-small_render.png)
+![AC_02 — консоль, три замера (poc1-req02-small)](images/AC_2/poc1-req02-small_cklick.png)
 
 Пример записи **Performance** для наглядности (клик по выключателю, User Timing **`user_toggle_switch_click_to_state`** на таймлайне):
 
-![AC_02 — Performance, poc1-req02-small (render_1)](images/AC_2/poc1-req02-small_render_1.png)
+![AC_02 — Performance, poc1-req02-small (cklick_1)](images/AC_2/poc1-req02-small_cklick_1.png)
 
 ### 6.2. `poc1-req01-big` — консоль
 
-![AC_02 — консоль, три замера (poc1-req01-big)](images/AC_2/poc1-req01-big_render.png)
+![AC_02 — консоль, три замера (poc1-req01-big)](images/AC_2/poc1-req01-big_cklick.png)

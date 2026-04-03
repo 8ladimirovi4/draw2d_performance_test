@@ -105,6 +105,9 @@
     var canvas = new draw2d.Canvas('gfx_holder', vp0.w, vp0.h);
     canvas.setScrollArea('#canvas-viewport');
     patchCanvasPointerCoordinates(canvas);
+    if (typeof installPerfDragGesture === 'function') {
+      installPerfDragGesture(canvas);
+    }
     var loader = new SchemaLoader(canvas);
 
     var url = '/fixtures/' + encodeURIComponent(fixture) + '.json';

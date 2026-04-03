@@ -78,6 +78,8 @@ After the diagram loads, the app logs to the **browser console** (DevTools → C
 | `unmarshal_to_canvas` | From`unmarshal_start` to `unmarshal_end`: in-memory schema handling and building canvas figures (**excludes** `JSON.parse` and network).                                                        |
 | `display_after_http`  | From when the HTTP response body is available (`http_fetch_end`) to the `schema_visible` mark after two `requestAnimationFrame` ticks (includes JSON parse, unmarshal, canvas/viewport sizing). |
 
+When draw2d commits a figure **move** (`CommandStack` **POST_EXECUTE**, `CommandMove` / collection), the console logs **`[perf] canvas path ≈ X px`** — Euclidean Δ in **canvas coordinates** from that command (`client/js/perf-drag-gesture.js`). Not a User Timing `measure`; **FPS** remains Appendix A.
+
 On fixtures that include the toggle switch (e.g. `sample`), clicking the switch also logs **`user_toggle_switch_click_to_state`**: from click until state and repaint are ready.
 
 ### Filtering the console

@@ -138,7 +138,7 @@
         performance.mark(MARK_UNMARSHAL_END);
         
         try {
-          performance.measure(MEASURE_UNMARSHAL_TO_CANVAS, MARK_UNMARSHAL_START, MARK_UNMARSHAL_END);
+          //performance.measure(MEASURE_UNMARSHAL_TO_CANVAS, MARK_UNMARSHAL_START, MARK_UNMARSHAL_END);
           var um = performance.getEntriesByName(MEASURE_UNMARSHAL_TO_CANVAS);
           var u = um[um.length - 1];
           if (u) {

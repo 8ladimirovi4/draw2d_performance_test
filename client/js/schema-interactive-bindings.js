@@ -5,7 +5,7 @@
 (function (global) {
   'use strict';
 
-  /** User Timing: клик по выключателю → смена состояния */
+  /** User Timing: клик по выключателю → смена состояния; конец — после 2× rAF (как schema_visible в app.js). */
   var MARK_TOGGLE_INPUT = 'user_toggle_switch_input';
   var MARK_TOGGLE_STATE = 'user_toggle_switch_state_ready';
   var MEASURE_TOGGLE = 'user_toggle_switch_click_to_state';
@@ -27,6 +27,8 @@
     var knobRelXOff = knob.getX() - track.getX();
     var knobRelY = knob.getY() - track.getY();
     var knobPadX = 3;
+    /** защита от устаревших rAF при быстром повторном клике */
+    var toggleFrameSeq = 0;
 
     function syncView() {
       var tx = track.getX();
@@ -45,6 +47,7 @@
     }
 
     function onToggleClick() {
+      var seq = ++toggleFrameSeq;
       try {
         performance.clearMarks(MARK_TOGGLE_INPUT);
         performance.clearMarks(MARK_TOGGLE_STATE);
@@ -57,21 +60,28 @@
       on = !on;
       syncView();
 
-      performance.mark(MARK_TOGGLE_STATE);
-      try {
-        performance.measure(MEASURE_TOGGLE, MARK_TOGGLE_INPUT, MARK_TOGGLE_STATE);
-        var list = performance.getEntriesByName(MEASURE_TOGGLE);
-        var m = list[list.length - 1];
-        if (m) {
-          console.info(
-            '[perf] ' + MEASURE_TOGGLE + ':',
-            m.duration.toFixed(3),
-            'ms (figure click → update state and repaint)'
-          );
-        }
-      } catch (e) {
-        /* ignore if measure unsupported */
-      }
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          if (seq !== toggleFrameSeq) {
+            return;
+          }
+          performance.mark(MARK_TOGGLE_STATE);
+          try {
+            performance.measure(MEASURE_TOGGLE, MARK_TOGGLE_INPUT, MARK_TOGGLE_STATE);
+            var list = performance.getEntriesByName(MEASURE_TOGGLE);
+            var m = list[list.length - 1];
+            if (m) {
+              console.info(
+                '[perf] ' + MEASURE_TOGGLE + ':',
+                m.duration.toFixed(3),
+                'ms (figure click → syncView, then 2× requestAnimationFrame before measure end)'
+              );
+            }
+          } catch (e) {
+            /* ignore if measure unsupported */
+          }
+        });
+      });
     }
 
     track.on('click', onToggleClick);

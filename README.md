@@ -1,84 +1,78 @@
 # draw2d_performance_test
 
-Test harness for measuring diagram rendering in the browser with the [draw2d](https://github.com/freegroup/draw2d) library (see `test_plan.md`).
+Стенд для замеров отрисовки диаграмм в браузере с библиотекой [draw2d](https://github.com/freegroup/draw2d)
 
-## Requirements
+## Требования
 
-- [Node.js](https://nodejs.org/) 18+ (with ES module support)
+- [Node.js](https://nodejs.org/) 18+ (с поддержкой ES-модулей)
 
-## Running
+## Запуск
 
-1. Install server dependencies:
+1. Установите зависимости сервера:
 
    ```bash
    cd server
    npm install
    ```
-2. Start the HTTP server (Fastify serves static files from the `client/` directory):
+2. Запустите HTTP-сервер (Fastify отдаёт статику из каталога `client/`):
 
    ```bash
    npm start
    ```
 
-   By default the server listens on **http://127.0.0.1:3000**.
-3. Open the app root in your browser, for example:
+   По умолчанию сервер слушает **http://127.0.0.1:3000**.
+3. Откройте в браузере корень приложения, например:
 
    - http://127.0.0.1:3000/
 
-## Environment variables
+## Переменные окружения
 
 
-| Variable | Purpose      | Default   |
-| ---------- | -------------- | ----------- |
-| `PORT`   | Server port  | `3000`    |
-| `HOST`   | Bind address | `0.0.0.0` |
+| Переменная | Назначение        | По умолчанию |
+| ---------------------- | ----------------------------- | ------------------------- |
+| `PORT`               | Порт сервера     | `3000`                  |
+| `HOST`               | Адрес привязки | `0.0.0.0`               |
 
-PowerShell example:
+## Выбор фикстуры диаграммы
 
-```powershell
-$env:PORT=8080; npm start
-```
-
-## Choosing a diagram fixture
-
-JSON files live in `client/fixtures/`. The file name (without `.json`) is set via a query parameter:
+JSON-файлы лежат в `client/fixtures/`. Имя файла **без** `.json` задаётся query-параметром:
 
 - http://127.0.0.1:3000/?fixture=sample
 
-If the parameter is omitted, `sample` is loaded.
+Если параметр не указан, загружается `sample`.
 
-Example:
+Пример:
 
 - http://127.0.0.1:3000/?fixture=poc1-req01-big
 
-### Filtering the console
+### Фильтр в консоли
 
-In the console filter box, type **`[perf]`** to show only these messages.
+В поле фильтра консоли введите **`[perf]`**, чтобы видеть только эти сообщения.
 
 ---
 
-## Official draw2d repository
+## Официальный репозиторий draw2d
 
-Source code and releases: **[freegroup/draw2d](https://github.com/freegroup/draw2d)** · clone: `git clone https://github.com/freegroup/draw2d.git`
+Исходный код и релизы: **[freegroup/draw2d](https://github.com/freegroup/draw2d)** · клонирование: `git clone https://github.com/freegroup/draw2d.git`
 
-## Running from the repository root (Python)
+## Запуск из корня репозитория (Python)
 
-1. Install Node dependencies for the Fastify server (there is no `package.json` in the repo root, so from the root use):
+1. Установите зависимости Node для сервера Fastify (в корне репозитория нет `package.json`, поэтому из корня можно так):
 
    ```bash
    npm install --prefix server
    ```
-   Or `cd server` and run `npm install` there.
-2. From the **repository root**, start a static HTTP server:
+   Либо выполните `cd server` и там `npm install`.
+2. Из **корня репозитория** поднимите простой статический HTTP-сервер:
 
    ```bash
    python -m http.server 8080
    ```
-3. Open the app in the browser (static assets live under `client/`):
+3. Откройте приложение в браузере (статика лежит в `client/`):
 
    - **http://localhost:8080/client/**
 
-   If you start the server **from the `client` directory**, open **http://localhost:8080/** instead:
+   Если сервер запущен **из каталога `client`**, откройте **http://localhost:8080/**:
 
    ```bash
    cd client

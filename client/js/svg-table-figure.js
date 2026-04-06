@@ -12,11 +12,7 @@
   }
 
   function escapeXml(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
   function colorToCss(c) {
@@ -59,10 +55,10 @@
               bgColor: '#fafafa',
               color: '#9e9e9e',
             },
-            attr || {}
+            attr || {},
           ),
           setter,
-          getter
+          getter,
         );
       },
 
@@ -74,10 +70,7 @@
         var pad = this.cellPadding;
         var fs = this.fontSize;
         /* Высота строки: запас под текст и вертикальную ошибку SVGFigure#importSVG (см. расчёт y ниже). */
-        var rowHeight = Math.max(
-          Math.ceil(fs * 2.5) + Math.ceil(pad.top / 2) + Math.ceil(pad.bottom / 2),
-          34
-        );
+        var rowHeight = Math.max(Math.ceil(fs * 2.5) + Math.ceil(pad.top / 2) + Math.ceil(pad.bottom / 2), 34);
         var charW = Math.ceil(fs * 0.62);
         var strokeW = this.stroke || 1;
         var rx = this.radius || 0;
@@ -112,10 +105,7 @@
               maxLen = t.length;
             }
           }
-          colWidths[c] = Math.max(
-            Math.ceil(maxLen * charW + pad.left + pad.right),
-            32
-          );
+          colWidths[c] = Math.max(Math.ceil(maxLen * charW + pad.left + pad.right), 32);
         }
 
         var innerW = 0;
@@ -131,13 +121,7 @@
         var gridColor = this.gridStroke != null ? colorToCss(this.gridStroke) : border;
 
         var parts = [];
-        parts.push(
-          '<svg xmlns="http://www.w3.org/2000/svg" width="' +
-            w +
-            '" height="' +
-            h +
-            '">'
-        );
+        parts.push('<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">');
         parts.push(
           '<rect x="0" y="0" width="' +
             w +
@@ -153,7 +137,7 @@
             rx +
             '" ry="' +
             rx +
-            '"/>'
+            '"/>',
         );
 
         var x0 = strokeW;
@@ -175,7 +159,7 @@
               (h - strokeW) +
               '" stroke="' +
               escapeXml(gridColor) +
-              '" stroke-width="1"/>'
+              '" stroke-width="1"/>',
           );
         }
 
@@ -194,15 +178,10 @@
               sepY +
               '" stroke="' +
               escapeXml(gridColor) +
-              '" stroke-width="1"/>'
+              '" stroke-width="1"/>',
           );
         }
 
-        /*
-         * SVGFigure#importSVG (ванильный draw2d): для <text> задаётся y = svg_y + getBBox().h/2,
-         * но getBBox() берётся до attr() с font-size — это bbox «дефолтного» paper.text, не ячейки.
-         * Чтобы визуальный якорь оказался у середины строки: svg_y ≈ cellMid − h0/2 (h0 ≈ высота до attr).
-         */
         var preAttrBBoxHalf = Math.ceil(fs * 0.68);
         for (r = 0; r < nrows; r++) {
           var rowTop = strokeW + pad.top + r * rowHeight;
@@ -215,8 +194,7 @@
           for (c = 0; c < ncols; c++) {
             var row = rows[r];
             var raw = Array.isArray(row) ? row[c] : '';
-            var text =
-              raw === null || raw === undefined ? '' : String(raw);
+            var text = raw === null || raw === undefined ? '' : String(raw);
             var weight = r === 0 ? this.headerFontWeight : this.bodyFontWeight;
             var tFill = r === 0 ? this.headerTextColor : this.textColor;
             parts.push(
@@ -234,7 +212,7 @@
                 escapeXml(tFill) +
                 '" text-anchor="start">' +
                 escapeXml(text) +
-                '</text>'
+                '</text>',
             );
             colX += colWidths[c];
           }
@@ -300,6 +278,6 @@
         }
         return this;
       },
-    }
+    },
   );
 })(typeof window !== 'undefined' ? window : globalThis);

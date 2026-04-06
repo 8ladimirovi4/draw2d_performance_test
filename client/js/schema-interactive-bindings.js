@@ -1,7 +1,3 @@
-/**
- * Привязка интерактивности к фигурам после загрузки схемы (draw2d + JSON).
- * См. фикстуры с известными id (например sample-switch-* в sample.json).
- */
 (function (global) {
   'use strict';
 
@@ -27,7 +23,6 @@
     var knobRelXOff = knob.getX() - track.getX();
     var knobRelY = knob.getY() - track.getY();
     var knobPadX = 3;
-    /** защита от устаревших rAF при быстром повторном клике */
     var toggleFrameSeq = 0;
 
     function syncView() {
@@ -38,11 +33,11 @@
       knob.setPosition(on ? knobXOn : knobXOff, ty + knobRelY);
       track.attr({
         bgColor: on ? '#66bb6a' : '#bdbdbd',
-        color: on ? '#2e7d32' : '#616161'
+        color: on ? '#2e7d32' : '#616161',
       });
       label.attr({
         text: on ? 'Вкл' : 'Выкл',
-        fontColor: on ? '#1b5e20' : '#616161'
+        fontColor: on ? '#1b5e20' : '#616161',
       });
     }
 
@@ -74,7 +69,7 @@
               console.info(
                 '[perf] ' + MEASURE_TOGGLE + ':',
                 m.duration.toFixed(3),
-                'ms (figure click → syncView, then 2× requestAnimationFrame before measure end)'
+                'ms (figure click → syncView, then 2× requestAnimationFrame before measure end)',
               );
             }
           } catch (e) {

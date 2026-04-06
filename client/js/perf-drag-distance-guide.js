@@ -1,14 +1,10 @@
-/**
- * Визуальная шкала START → STOP ровно 100 px в координатах холста (кейс AC_04).
- * Фигуры не участвуют в выделении вместе со схемой (setSelectable(false) и т.д.).
- */
 (function (global) {
   'use strict';
 
   var DRAG_DISTANCE_PX = 100;
   var FIXTURES = {
     'poc1-req02-small': true,
-    'poc1-req01-big': true
+    'poc1-req01-big': true,
   };
 
   var STRIP_X = 16;
@@ -63,7 +59,7 @@
         radius: 0,
         bgColor: '#fff3cd',
         color: '#e65100',
-        stroke: 1
+        stroke: 1,
       },
       {
         type: 'draw2d.shape.basic.Rectangle',
@@ -75,7 +71,7 @@
         radius: 0,
         bgColor: '#bf360c',
         color: '#bf360c',
-        stroke: 0
+        stroke: 0,
       },
       {
         type: 'draw2d.shape.basic.Rectangle',
@@ -87,7 +83,7 @@
         radius: 0,
         bgColor: '#bf360c',
         color: '#bf360c',
-        stroke: 0
+        stroke: 0,
       },
       {
         type: 'draw2d.shape.basic.Label',
@@ -97,8 +93,8 @@
         text: '100 px на холсте: START — STOP (AC_04)',
         fontSize: 11,
         fontColor: '#5d4037',
-        stroke: 0
-      }
+        stroke: 0,
+      },
     ];
 
     var reader = new draw2d.io.json.Reader();

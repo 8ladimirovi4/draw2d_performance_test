@@ -1,11 +1,6 @@
-/**
- * Application entry: fetch fixture over HTTP → JSON.parse → draw2d.io.json.Reader.
- * User Timing: см. константы MARK_* / MEASURE_* ниже (выключатель — в schema-interactive-bindings.js).
- */
 (function () {
   'use strict';
 
-  /** User Timing: ответ тела HTTP → первый кадр после отрисовки схемы */
   var MARK_HTTP_FETCH_END = 'http_fetch_end';
   var MARK_UNMARSHAL_START = 'unmarshal_start';
   var MARK_UNMARSHAL_END = 'unmarshal_end';
@@ -34,7 +29,7 @@
         console.info(
           '[perf] ' + MEASURE_DISPLAY_AFTER_HTTP + ':',
           m.duration.toFixed(2),
-          'ms (HTTP response body received → on-screen schema marker: JSON.parse, unmarshal, canvas/viewport sizing, then 2× requestAnimationFrame before mark)'
+          'ms (HTTP response body received → on-screen schema marker: JSON.parse, unmarshal, canvas/viewport sizing, then 2× requestAnimationFrame before mark)',
         );
       }
     } catch (e) {
@@ -60,17 +55,11 @@
 
     canvas.fromDocumentToCanvasCoordinate = function (clientX, clientY) {
       var r = surfaceRect();
-      return new draw2d.geo.Point(
-        (clientX - r.left) * this.zoomFactor,
-        (clientY - r.top) * this.zoomFactor
-      );
+      return new draw2d.geo.Point((clientX - r.left) * this.zoomFactor, (clientY - r.top) * this.zoomFactor);
     };
     canvas.fromCanvasToDocumentCoordinate = function (x, y) {
       var r = surfaceRect();
-      return new draw2d.geo.Point(
-        x * (1 / this.zoomFactor) + r.left,
-        y * (1 / this.zoomFactor) + r.top
-      );
+      return new draw2d.geo.Point(x * (1 / this.zoomFactor) + r.left, y * (1 / this.zoomFactor) + r.top);
     };
   }
 
@@ -89,10 +78,7 @@
       maxR = canvas.initialWidth;
       maxB = canvas.initialHeight;
     }
-    canvas.setDimension(
-      Math.max(maxR + pad, vp.w),
-      Math.max(maxB + pad, vp.h)
-    );
+    canvas.setDimension(Math.max(maxR + pad, vp.w), Math.max(maxB + pad, vp.h));
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -136,7 +122,7 @@
           installSchemaInteractiveBindings(canvas);
         }
         performance.mark(MARK_UNMARSHAL_END);
-        
+
         try {
           //performance.measure(MEASURE_UNMARSHAL_TO_CANVAS, MARK_UNMARSHAL_START, MARK_UNMARSHAL_END);
           var um = performance.getEntriesByName(MEASURE_UNMARSHAL_TO_CANVAS);
@@ -145,7 +131,7 @@
             console.info(
               '[perf] ' + MEASURE_UNMARSHAL_TO_CANVAS + ':',
               u.duration.toFixed(2),
-              'ms (in-memory schema object → canvas figures; JSON.parse not included)'
+              'ms (in-memory schema object → canvas figures; JSON.parse not included)',
             );
           }
         } catch (e) {
@@ -165,7 +151,7 @@
         setStatus(
           statusEl,
           'Схема загружена (' + fixture + '). Фигур на холсте: ' + canvas.getFigures().getSize(),
-          false
+          false,
         );
       })
       .catch(function (err) {
